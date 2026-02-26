@@ -173,10 +173,10 @@ body {
   width: min(100%, var(--cert-width));
   aspect-ratio: var(--cert-ratio);
   background: linear-gradient(135deg, #fef0c8 0%, #ffd1e6 40%, #c6f4ff 100%);
-  border-radius: 28px;
+  border-radius: 0;
   padding: calc(32px * var(--cert-scale));
   box-shadow: var(--shadow);
-  border: 3px solid rgba(42, 26, 122, 0.1);
+  border: none;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -185,12 +185,7 @@ body {
 }
 
 .certificate::before {
-  content: "";
-  position: absolute;
-  inset: 16px;
-  border-radius: 22px;
-  border: 2px dashed rgba(42, 26, 122, 0.2);
-  pointer-events: none;
+  content: none;
 }
 
 .back {
