@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BORCE | Darkovy certifikat</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Space+Grotesk:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style id="print-style"></style>
+  </head>
+  <body>
+    <div class="bg-burst" aria-hidden="true"></div>
+
+    <main class="page">
+      <header class="top-bar">
+        <div>
+          <h1>Generator darkoveho certifikatu</h1>
+          <p>Vyber format, dopln text a vytiskni v landscape orientaci.</p>
+        </div>
+        <div class="controls">
+          <div class="size-switch">
+            <button type="button" data-size="a5" class="is-active">A5</button>
+            <button type="button" data-size="postcard">10 x 15 cm</button>
+          </div>
+          <button type="button" class="print-btn">Tisk</button>
+        </div>
+      </header>
+
+      <section class="editor">
+        <label>
+          Jmeno
+          <input type="text" id="nameInput" value="jméno" />
+        </label>
+        <label>
+          Vyznamne jubileum
+          <input type="text" id="jubileeInput" value="významné jubileum" />
+        </label>
+        <div class="qr-picker">
+          <p>QR varianta</p>
+          <div class="qr-buttons">
+            <button type="button" data-qr="qr-1" class="is-active">QR 1</button>
+            <button type="button" data-qr="qr-2">QR 2</button>
+            <button type="button" data-qr="qr-3">QR 3</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="certificate-grid">
+        <!-- Predni strana -->
+        <article class="certificate front">
+          <h2 class="headline">BORČE</h2>
+          <p class="subtitle">Otoč list</p>
+        </article>
+
+        <!-- Zadni strana -->
+        <article class="certificate back">
+          <h3>Cenna listina</h3>
+          <p class="message">
+            Drahý <span data-field="name">jméno</span>!<br />
+            Všechno nejlepší k
+            <span data-field="jubilee">významné jubileum</span>.<br />
+            Tlupa si tě váží a proto držíš tento list.<br />
+            Jsi borec!<br />
+            A budeš ještě lepší.
+          </p>
+          <div class="qr-row">
+            <div class="qr-text">
+              <p>Skenuj QR a zjistiš vic</p>
+              <div class="arrow" aria-hidden="true"></div>
+            </div>
+            <div class="qr-placeholder" data-qr-output>
+              <img src="" alt="QR 1" />
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
